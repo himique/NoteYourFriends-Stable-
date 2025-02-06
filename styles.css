@@ -51,6 +51,20 @@ body {
     margin: 0px;
     padding: 15px;
 }
+.card_text_wrapper2 {
+
+    width: auto;
+    height: fit-content;
+    margin: 0px;
+    padding: 15px;
+}
+.card_text_wrapper3 {
+
+    width: auto;
+    height: fit-content;
+    margin: 0px;
+    padding: 15px;
+}
 
 .card_list {
     height: fit-content;
