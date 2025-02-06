@@ -1,6 +1,8 @@
 let Database = {
   mainArray: [
-    { name: "Artem", secondName: "Bondarenko", age: 18, id: 1, avg: 2 },
+    { name: "Artem", secondName: "Bondarenko", age: 22, emp: "CEO of Microsoft", id: 1, desc: "Im Prfossional photograder" },
+    { name: "wwww", secondName: "Mueller", age: 43, emp: "CEO of Google", id: 2, desc: "Im Prfossional photograder" },
+    
   ],
 
     removeObjectById(arr, IdFound) {
@@ -40,10 +42,10 @@ let Database = {
       }
     },
 
-    avg(arr, productName, newCount) {
+    desc(arr, productName, newCount) {
       const item = arr.find(item => item.id === productName);
       if (item) {
-        item.avg = newCount;
+        item.desc = newCount;
       }
     },
   },
@@ -90,13 +92,9 @@ let Database = {
     return number;
   },
   
-  add(name, secondName, age, id, avg) {
-    this.mainArray.push({ name: name, secondName: secondName, age: age, id: id, avg: avg });
+  add(name, secondName, age, emp, id, desc) {
+    this.mainArray.push({ name: name, secondName: secondName, age: age, emp: emp, id: id, desc: desc });
   },
-
-}
-
-let Enviroment = {
 
 }
 
@@ -106,3 +104,4 @@ let Enviroment = {
 
 // Database.findObjectById(Database.mainArray,2)
 console.log(Database.mainArray);
+

@@ -52,6 +52,22 @@ body {
     padding: 15px;
 }
 
+.card_text_wrapper2 {
+
+    width: auto;
+    height: fit-content;
+    margin: 0px;
+    padding: 15px;
+}
+
+.card_text_wrapper3 {
+
+    width: auto;
+    height: fit-content;
+    margin: 0px;
+    padding: 15px;
+}
+
 .card_list {
     height: fit-content;
     width: 100%;
@@ -119,7 +135,7 @@ input[type="reset"] {
     width: 25px;
     font-size: 20px;
     border-radius: 50%;
-
+    user-select: none;
     background-color: black;
     color: white;
     text-align: center;
@@ -130,7 +146,9 @@ input[type="reset"] {
 .add_button:hover {
     opacity: 0.7;
 }
-
+.add_button:active{
+    opacity: 0.9;
+}
 .remove_button {
     height: 25px;
     line-height: 25px;
@@ -164,7 +182,7 @@ input[type="reset"] {
     display: grid;
     width: 100%;
     height: 18px;
-    
+
     grid-column-gap: 50px;
     grid-template-columns: repeat(1, auto);
     justify-content: space-between;
