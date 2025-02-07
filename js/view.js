@@ -18,6 +18,7 @@ const cardList = {
     div3.classList.add("card_text_wrapper3");
     divRemove.classList.add("remove_menu");
     cardContainer.classList.add("card_container");
+
     
 
     

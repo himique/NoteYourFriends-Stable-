@@ -2,22 +2,22 @@ let Database = {
   mainArray: [
     { name: "Artem", secondName: "Bondarenko", age: 22, emp: "CEO of Microsoft", id: 1, desc: "Im Prfossional photograder" },
     { name: "Hans", secondName: "Mueller", age: 43, emp: "CEO of Google", id: 2, desc: "Im Prfossional photograder" },
-    
+
   ],
 
-    removeObjectById(arr, IdFound) {
-      const index = arr.findIndex(x => x.id === IdFound);
-      if (index > -1) {
-        arr.splice(index, 1);
-      }
-    },
-    findObjectById(arr, idToFind) {
-      const foundObject = arr.find(item => item.id === idToFind);
-      if (foundObject === undefined) {
-        console.log("Not found")
-      }
-      return foundObject; 
-    },
+  removeObjectById(arr, IdFound) {
+    const index = arr.findIndex(x => x.id === IdFound);
+    if (index > -1) {
+      arr.splice(index, 1);
+    }
+  },
+  findObjectById(arr, idToFind) {
+    const foundObject = arr.find(item => item.id === idToFind);
+    if (foundObject === undefined) {
+      console.log("Not found")
+    }
+    return foundObject;
+  },
 
   update: {
 
@@ -65,13 +65,18 @@ let Database = {
   },
 
   setId(arr) {
-    let iterated = this.iterate(arr);
-    let id = (Math.max(...iterated)) + 1;
-    if (arr.length === 0) {
-      id = 1;
+    // let iterated = this.iterate(arr);
+    // let finalId = (Math.max(...iterated)) + 1;
+    if (arr.length > 0) {
+      finalId = Math.max(...arr.map(item => item.id)) + 1;      //изучит подробную роботу
     }
-    return id
+    else if (arr.length === 0) {
+      finalId = 1;
+    }
+    return finalId
   },
+
+
 
   prompt(name) {
     const entered = prompt(`Enter ${name}`);
@@ -91,7 +96,7 @@ let Database = {
     }
     return number;
   },
-  
+
   add(name, secondName, age, emp, id, desc) {
     this.mainArray.push({ name: name, secondName: secondName, age: age, emp: emp, id: id, desc: desc });
   },
@@ -103,5 +108,5 @@ let Database = {
 // Example of using prompts
 
 // Database.findObjectById(Database.mainArray,2)
-console.log(Database.mainArray);
+console.log(Database.mainArray)
 
