@@ -9,7 +9,7 @@
 }
 
 body {
-    padding: 0px;
+    padding: 120px;
     margin: 0px;
     font-family: var(--font-family);
     font-size: var(--font-size);
@@ -106,8 +106,7 @@ body {
     display: flex;
     position: relative;
     justify-content: center;
-    width: 100%;
-    height: 100%;
+
 }
 
 button,
@@ -146,15 +145,18 @@ input[type="reset"] {
 .add_button:hover {
     opacity: 0.7;
 }
-.add_button:active{
+
+.add_button:active {
     opacity: 0.9;
 }
+
 .remove_button {
     height: 25px;
     line-height: 25px;
     width: 25px;
     margin: 7px;
     font-size: 20px;
+    user-select: none;
     border-radius: 50%;
     background-color: black;
     color: white;
@@ -167,14 +169,19 @@ input[type="reset"] {
 
 }
 
+.remove_button:hover {
+    opacity: 0.7;
+}
+.remove_button:active {
+    opacity: 0.9;
+}
+
 .card_connect {
     width: fit-content;
     height: fit-content;
 }
 
-.remove_button:hover {
-    opacity: 0.7;
-}
+
 
 .remove_menu {
     position: relative;

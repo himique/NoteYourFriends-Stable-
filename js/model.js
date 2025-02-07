@@ -1,7 +1,7 @@
 let Database = {
   mainArray: [
     { name: "Artem", secondName: "Bondarenko", age: 22, emp: "CEO of Microsoft", id: 1, desc: "Im Prfossional photograder" },
-    { name: "wwww", secondName: "Mueller", age: 43, emp: "CEO of Google", id: 2, desc: "Im Prfossional photograder" },
+    { name: "Hans", secondName: "Mueller", age: 43, emp: "CEO of Google", id: 2, desc: "Im Prfossional photograder" },
     
   ],
 
@@ -16,7 +16,7 @@ let Database = {
       if (foundObject === undefined) {
         console.log("Not found")
       }
-      return foundObject; // Return the entire object or undefined if not found
+      return foundObject; 
     },
 
   update: {

@@ -11,6 +11,7 @@ const cardList = {
     let removeButton = document.createElement("div");
 
     removeButton.classList.add("remove_button");
+    removeButton.dataset.cardId = contact.id;
     button.classList.add("card_list");
     div.classList.add("card_text_wrapper");
     div2.classList.add("card_text_wrapper2");
