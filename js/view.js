@@ -72,6 +72,16 @@ const cardList = {
     let textDesc2 = document.createElement("h3");
     let textDesc3 = document.createElement("h3");
     let textDesc4 = document.createElement("p");
+    let changeMenu = document.createElement("div");
+    let changeButton = document.createElement("div");
+    let formButtonUpdate = document.createElement("button");
+
+
+    formButtonUpdate.classList.add("form_button_change_update");
+    formButtonUpdate.dataset.changeUpdate = arr.id;
+    changeMenu.classList.add("change_menu");
+    changeButton.classList.add("change_button");
+    changeButton.dataset.changeId = arr.id;
 
     textDesc1.classList.add("desc_name");
     textDesc2.classList.add("desc_age");
@@ -85,6 +95,7 @@ const cardList = {
     descriptionEmployment.classList.add("description_employment");
     descriptionLastAction.classList.add("description_last_action");
 
+    changeButton.insertAdjacentHTML("beforeend", `<img src="./images/ppeenn.svg" alt="change">`);
     textDesc1.insertAdjacentHTML("beforeend", `${arr.name} ${arr.secondName}`);
     textDesc2.insertAdjacentHTML("beforeend", `Age: ${arr.age}`);
     textDesc3.insertAdjacentHTML("beforeend", `${arr.emp}`);
@@ -94,6 +105,9 @@ const cardList = {
     descriptionBirthday.appendChild(textDesc2);
     descriptionEmployment.appendChild(textDesc3);
     descriptionLastAction.appendChild(textDesc4);
+
+    changeMenu.appendChild(changeButton);
+    description.appendChild(changeMenu);
     description.appendChild(descriptionName);
     description.appendChild(descriptionBirthday);
     description.appendChild(descriptionEmployment);
@@ -101,4 +115,21 @@ const cardList = {
 
     element.appendChild(description);
   },
-}
+  renderWelcome(element) {
+    element.innerHTML = '';
+    let description = document.createElement("div");
+    let textDesc1 = document.createElement("h2");
+    let textDesc2 = document.createElement("p");
+
+    textDesc1.classList.add("welcome_h2");
+    textDesc2.classList.add("welcome_p");
+    description.classList.add("description");
+
+    textDesc1.insertAdjacentHTML("beforeend", `Note Your Friends`);
+    textDesc2.insertAdjacentHTML("beforeend", `Select the card to see more information`);
+
+    description.appendChild(textDesc1);
+    description.appendChild(textDesc2);
+    element.appendChild(description);
+  },
+};
